@@ -1,0 +1,66 @@
+.root
+  position: relative
+  padding: 100px 0
+  overflow: hidden
+
+.overlay
+  width: 276px
+  height: 276px
+  border-radius: 50%
+  background-color: #FFF4F0
+  position: absolute
+  top: -20%
+  left: -10%
+  z-index: 3
+  filter: blur(60px)
+
+  &_bottom_left
+    background: #F6E4F0
+    top: unset
+    bottom: -10%
+    z-index: 2
+
+  &_bottom_right
+    background: #ECFEFE
+    top: unset
+    bottom: -10%
+    left: unset
+    right: -10%
+
+  &_top_right
+    background: #F6F2FF
+    left: unset
+    right: -10%
+
+.content
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  text-align: center
+  position: relative
+  z-index: 999
+
+  @media (min-width: 1024px)
+    max-width: 60%
+    margin: 0 auto
+
+.title
+  font-size: 32px
+  color: #2D2D2D
+  line-height: 28.8px
+
+  @media (min-width: 1024px)
+    font-size: 40px
+    line-height: 48px
+
+
+.description
+  font-size: 16px
+  color: #4A5050
+  line-height: 24px
+  margin-top: 18px
+
+  @media (min-width: 1024px)
+    font-weight: 500
+    margin-top: 25px
