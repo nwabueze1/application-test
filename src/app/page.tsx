@@ -13,9 +13,9 @@ import { AssetsClasses } from "@/components/AssetsClasses";
 import { HowWeRegulate } from "@/components/HowWeRegulate";
 import { JoinTheRiseCommunity } from "@/components/JoinTheRiseCommunity";
 import { JoinOurUsers } from "@/components/JoinOurUsers";
+import { SaveForTheFuture } from "@/components/SaveForTheFuture";
 
 export default function Home() {
-
   const renderInvestments = () =>
     investments.map((investment, index) => <Investment key={index} {...investment} />);
 
@@ -27,6 +27,7 @@ export default function Home() {
         <Investors />
         {renderInvestments()}
         <AssetsClasses />
+        <SaveForTheFuture />
       </Container>
       <HowWeRegulate />
       <Container>

@@ -1,0 +1,110 @@
+.root
+    padding: 30px 0
+
+.section
+    display: grid
+    grid-template-columns: 1fr
+    gap: 30px
+
+    @media screen and (min-width: 1024px)
+        grid-template-columns: 1fr 1.5fr
+        align-items: center
+        gap: 10%
+
+.image_container
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+
+.inner_image_container
+    height: 269px
+    width: 316px
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    display: flex
+    border-radius: 5px
+    overflow: hidden
+
+.inner
+    position: relative
+    flex: 1
+    z-index: 1
+    display: flex
+    flex-direction: column
+    justify-content: end
+    padding: 16px
+
+
+.overlay_image
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+.image_title
+    color: #FFFFFF
+    font-size: 16px
+    font-weight: 700
+
+.image_description
+    font-size: 12px
+    margin-top: 8px
+    color: #FFFFFF
+
+.image_link
+    display: inline-flex
+    align-items: center
+    justify-content: space-between
+    margin-top: 12px
+    font-size: 12px
+    font-weight: 700
+    color: white
+
+    & span
+        text-decoration: underline
+
+.text_container
+    display: grid
+    gap: 16px
+    text-align: center
+
+    @media screen and (min-width: 1024px) 
+        max-width: 65%
+        text-align: left
+        
+    
+
+.overline
+    font-size: 18px
+    font-weight: 500
+    color: #2d2d2d
+.title
+    font-weight: 700
+    color: #2D2D2D
+    font-size: 32px
+
+    & span
+        color: #b833da
+
+    @media screen and (min-width: 1024px)
+        font-size: 40px
+        
+    
+
+.button
+    color: white
+    background: #07969E
+    margin-top: 6px
+
+
+.description
+    font-size: 16px
+    color: #2d2d2d
+    line-height: 24px
+
+
+
