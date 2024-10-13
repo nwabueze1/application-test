@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Styles from "./navbar.module.sass";
 import Link from "next/link";
 import Image from "next/image";
@@ -23,18 +23,32 @@ export const Navbar = () => {
       </li>
     ));
 
+  const renderNavList = (is_web = true) => (
+    <ul className={clx(Styles.nav_list, is_web && Styles.nav_list_web)}>{renderNavLinks()}</ul>
+  );
+
   return (
     <nav className={Styles.nav}>
       <div className={Styles.nav_logo__container}>
         <Image src={"/Logo.png"} height={17} width={60} alt={"logo"} />
       </div>
-      <ul className={clx(Styles.nav_list, Styles.nav_list_web)}>{renderNavLinks()}</ul>
+      {renderNavList()}
       <button className={Styles.menu_button} onClick={() => setOpenDrawer(!openDrawer)}>
         <Image src={"/menu-toggler.png"} height={24} width={24} alt="menu" />
       </button>
-      {/*<div className={clx(Styles.drawer, {*/}
-      {/*  [Styles.drawer_open]: openDrawer,*/}
-      {/*})}>{renderNavLinks()}</div>*/}
+      <div
+        className={clx(Styles.overlay, {
+          [Styles.overlay_open]: openDrawer,
+        })}
+        onClick={() => setOpenDrawer(false)}
+      />
+      <div
+        className={clx(Styles.drawer, {
+          [Styles.drawer_open]: openDrawer,
+        })}
+      >
+        <ul className={Styles.nav_list}>{renderNavLinks()}</ul>
+      </div>
     </nav>
   );
 };

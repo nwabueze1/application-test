@@ -9,12 +9,16 @@
 
   &_list
     display: flex
-    align-items: center
-    justify-content: space-between
+    flex-direction: column
     padding: 0
     margin: 0
     list-style: none
     gap: 30px
+
+    @media screen and ( min-width: 1024px )
+      flex-direction: row
+      justify-content: center
+      align-items: center
 
     &_web
       display: none
@@ -38,6 +42,10 @@
         position: absolute
         top: 25px
         left: 50%
+        display: none
+
+        @media screen and ( min-width: 1024px )
+          display: inline-block
 
 
   &_list__link
@@ -59,7 +67,7 @@
 
 .drawer
   position: absolute
-  min-width: 50vw
+  width: 50vw
   height: 100vh
   padding: 20px
   display: grid
@@ -67,6 +75,7 @@
   right: -100vw
   transition: all 0.5s ease-in-out
   background-color: white
+  top: 0
 
 
   @media (min-width: 1024px)
@@ -74,4 +83,20 @@
 
   &_open
     right: 0
+    z-index: 10
+
+    @media screen and (min-width: 1024px)
+      display: none
+
+.overlay
+  position: absolute
+  height: 100vh
+  width: 100vw
+  background: rgba(0, 0, 0, 0.3)
+  display: none
+  top: 0
+  left: 0
+
+  &_open
+    display: block
 
