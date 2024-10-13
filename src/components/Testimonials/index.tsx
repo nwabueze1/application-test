@@ -60,8 +60,8 @@ type CardPropsType = {
 export const Card: FC<Partial<CardPropsType>> = ({ author, content }) => {
   return (
     <div className={styles.card_base}>
-      <article className={clx(dmSans.className, styles.card)}>
-        <p className={styles.card_description}>{content}</p>
+      <article className={clx(styles.card, dmSans.className)}>
+        <p className={clx(styles.card_description, dmSans.className)}>{content}</p>
         <div className={styles.card_author}>
           <div className={styles.card_image_container}>
             <Image
