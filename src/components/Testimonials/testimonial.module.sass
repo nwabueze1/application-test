@@ -1,0 +1,73 @@
+.root
+    margin: 30px 0
+.header
+    text-align: center
+    margin: 0 auto
+    display: grid
+    gap: 20px
+    max-width: 100%
+
+    @media screen and ( min-width: 1024px)
+        gap: 36px
+        max-width: 60%
+        
+.title
+    // text-align: center
+    color: #40BBC3
+    font-weight: bold
+    font-size: 32px
+    line-height: 28px
+
+    @media screen and (min-width: 1024px)
+        font-size: 40px
+        line-height: 48px
+
+.description
+    color: #4A5050
+    font-size: 18px
+    font-weight: 500
+    line-height: 23px
+
+.card_container
+    margin-top: 40px
+
+.card_base
+    padding: 15px
+.card
+    border: 1px solid #ECFEFE
+    background: white
+    padding: 20px
+    border-radius: 10px
+    display: flex
+    flex-direction: column
+    min-height: 240px
+    box-shadow: 10px 10px 11px -14px rgba(0,0,0,0.75)
+    
+.card_description
+    font-size: 16px
+    color: #4A5050
+    line-height: 24px
+    flex: 1
+
+.card_author
+    display: flex
+    gap: 20px
+    align-items: center 
+
+.card_image_container
+    height: 32px
+    width: 32px
+    border-radius: 50%
+    overflow: hidden
+
+.card_author_image
+    height: 100%
+    width: 100%
+    object-fit: cover
+
+
+.card_author_text
+    font-size: 16px
+    font-weight: 600
+    color: #2d2d2d
+

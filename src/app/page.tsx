@@ -1,8 +1,4 @@
 "use client";
-import { About } from "@/components/home/About";
-import { Layout, LayoutPropsRef } from "@/components/Layout";
-import { sidebarData } from "@/data/sidebar";
-import { useRef } from "react";
 import { Hero } from "@/components";
 import { Navbar } from "@/components/Navbar";
 import { Container } from "@/components/Container";
@@ -14,6 +10,8 @@ import { HowWeRegulate } from "@/components/HowWeRegulate";
 import { JoinTheRiseCommunity } from "@/components/JoinTheRiseCommunity";
 import { JoinOurUsers } from "@/components/JoinOurUsers";
 import { SaveForTheFuture } from "@/components/SaveForTheFuture";
+import { Footer } from "@/components/Footer";
+import { Testimonials } from "@/components/Testimonials";
 
 export default function Home() {
   const renderInvestments = () =>
@@ -31,8 +29,10 @@ export default function Home() {
       </Container>
       <HowWeRegulate />
       <Container>
+        <Testimonials />
         <JoinTheRiseCommunity />
         <JoinOurUsers />
+        <Footer />
       </Container>
     </>
   );
