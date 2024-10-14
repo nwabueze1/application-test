@@ -80,7 +80,11 @@ export const Hero = () => {
         id="dot3"
         style={{ bottom: "unset", top: "2%", left: "50%" }}
       />
-      <div className={styles.dot_bg} id="dot5" style={{ left: "unset", right: 0, bottom: "2%" }} />
+      <div
+        className={clx(styles.dot_bg, styles.dot_scaler)}
+        id="dot5"
+        style={{ left: "unset", right: 0, bottom: "2%" }}
+      />
       <div
         className={styles.dot_sm}
         id="dot4"
