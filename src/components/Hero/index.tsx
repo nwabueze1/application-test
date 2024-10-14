@@ -14,7 +14,7 @@ export const Hero = () => {
         repeat: -1,
         yoyo: true,
         yoyoEase: Power3.easeInOut,
-        xPercent: 400,
+        xPercent: 200,
       };
       gsap.to("#dot1", {
         yPercent: -40,
