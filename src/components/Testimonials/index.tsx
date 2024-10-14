@@ -57,7 +57,7 @@ type CardPropsType = {
   };
 };
 
-export const Card: FC<Partial<CardPropsType>> = ({ author, content }) => {
+const Card: FC<Partial<CardPropsType>> = ({ author, content }) => {
   return (
     <div className={styles.card_base}>
       <article className={clx(styles.card, dmSans.className)}>

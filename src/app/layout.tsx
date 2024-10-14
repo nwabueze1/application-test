@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { dmSans, tomatoFont } from "@/font/body";
-import { DM_Sans } from "next/font/google";
+import { tomatoFont } from "@/font/body";
+
 import clx from "classnames";
 
 export const metadata: Metadata = {
@@ -9,15 +9,14 @@ export const metadata: Metadata = {
   description: "Portfolio",
 };
 
-
 export default function RootLayout({
-                                     children,
-                                   }: Readonly<{
+  children,
+}: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
     <html lang="en">
-    <body className={clx(tomatoFont.className)}>{children}</body>
+      <body className={clx(tomatoFont.className)}>{children}</body>
     </html>
   );
 }
